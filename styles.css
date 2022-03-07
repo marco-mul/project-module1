@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+* {
+    color: #ffffff;
+    font-family: 'Russo One', sans-serif;
+    font-size: 16px;
+    margin: 0 0;
+}
+
+body {
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: center;
+    cursor: url(/flag.png), auto;
+    background-image: url(/dirt-bg.jpeg);
+    background-repeat: repeat;
+    background-position: cover;
+    background-size: 100%;
+}
+
+
+h1 {
+    font-size: 4rem;
+    padding: 20px 0 50px 0;
+}
+
+#game {
+    border: #ffffff 5px solid;
+    width: 600px;
+    height: 600px;
+    margin: 0 10px 0 10px;
+    
+}
+
+@media (max-width: 600px) {
+    #game {
+      width: 95%;
+      padding: 0 10px 0 10px;
+    }
+    h1 {
+        font-size: 2rem;
+        padding: 20px 0 20px 0; 
+    }
+  }
+
+.row {
+    width: 100%;
+    height: 33%;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-evenly;
+	align-items: center;
+	align-content: center;
+}
+
+.hole {
+    background-image: url(/dirt2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 90%;
+    height: 100%;
+    width: 30%;
+}
+
+.hole-up {
+    background-image: url(/Putin.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 90%;
+    height: 100%;
+    width: 30%;
+}
+
+#score-element {
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: center;
+    padding: 20px 40px 20px 40px;
+}
+
+#score-screen {
+    font-size: 3rem;
+}
+
+#time-element {
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: center;
+    padding: 20px 40px 20px 40px;
+}
+
+#time-screen {
+    font-size: 3rem;
+}
+
+#bottom {
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-evenly;
+	align-items: center;
+	align-content: stretch;
+}
