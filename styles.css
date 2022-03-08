@@ -5,6 +5,7 @@
     font-family: 'Russo One', sans-serif;
     font-size: 16px;
     margin: 0 0;
+    cursor: url(./img/flag.cur), default;
 }
 
 body {
@@ -14,8 +15,8 @@ body {
 	justify-content: flex-start;
 	align-items: center;
 	align-content: center;
-    cursor: url(/flag.png), auto;
-    background-image: url(/dirt-bg.jpeg);
+    cursor: url(./img/flag.cur), default;
+    background-image: url(./img/dirt-bg.jpeg);
     background-repeat: repeat;
     background-position: cover;
     background-size: 100%;
@@ -37,18 +38,50 @@ h1 {
 
 @media (max-width: 600px) {
     #game {
-      width: 95%;
-      padding: 0 10px 0 10px;
+      width: 400px;
+      height: 400px;
+      margin: 0 20px 0 20px;
     }
     h1 {
         font-size: 2rem;
         padding: 20px 0 20px 0; 
+    }
+
+    #score-screen {
+        font-size: 2rem;
+    }
+
+    #time-screen {
+        font-size: 2rem;
+    }
+  }
+
+  @media (max-width: 300px) {
+    #game {
+      width: 200px;
+      height: 200px;
+      margin: 0 20px 0 20px;
+    }
+    h1 {
+        font-size: 1.5rem;
+        padding: 20px 0 20px 0; 
+    }
+    #score-screen {
+        font-size: 1.5rem;
+    }
+
+    #time-screen {
+        font-size: 1.5rem;
     }
   }
 
 .row {
     width: 100%;
     height: 33%;
+    background-image: url(./img/dirt3.png);
+    background-size: 33%;
+    background-repeat: repeat;
+    background-position: center;
     display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
@@ -57,23 +90,70 @@ h1 {
 	align-content: center;
 }
 
-.hole {
-    background-image: url(/dirt2.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 90%;
+
+
+div > img {
     height: 100%;
-    width: 30%;
+    width: 100%;
+}
+
+
+
+@keyframes slidein {
+    0% {
+      margin-bottom: 0%;
+    }
+    50% {
+      margin-bottom: 15%;
+    }
+    100% {
+      margin-bottom: 0%;
+    }
+  }
+
+  @keyframes slideout {
+    0% {
+      margin-bottom: 0%;
+    }
+    50% {
+      margin-bottom: -8%;
+    }
+    100% {
+      margin-bottom: -15%;
+    }
+  }
+
+  .hole-down {
+    height: 100%;
+    width: 33%;
 }
 
 .hole-up {
-    background-image: url(/Putin.png);
+    background-image: url(./img/Putin.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 90%;
+    background-size: 45%;
+    z-index: -3;
     height: 100%;
-    width: 30%;
+    width: 33%;
+    animation-duration: 2s;
+    animation-name: slidein;
+    animation-iteration-count: 1;
 }
+
+.putin-dead {
+    background-image: url(./img/Putin-dead.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 45%;
+    z-index: -3;
+    height: 100%;
+    width: 33%; 
+    animation-duration: 1s;
+    animation-name: slideout;
+    animation-iteration-count: 1;
+}
+
 
 #score-element {
     display: flex;
