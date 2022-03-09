@@ -25,26 +25,47 @@ body {
 
 h1 {
     font-size: 4rem;
-    padding: 20px 0 50px 0;
+    padding: 10px 0 20px 0;
 }
 
 #game {
     border: #ffffff 5px solid;
     width: 600px;
     height: 600px;
-    margin: 0 10px 0 10px;
+    margin: 0 10px 20px 10px;
     
+}
+
+.no-game {
+    background-image: url(./img/game-start.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 1000 !important;
+    width: 600px;
+    height: 600px;
+    margin: 0 10px 20px 10px;
+}
+
+.hidden {
+    display:none;
 }
 
 @media (max-width: 600px) {
     #game {
       width: 400px;
       height: 400px;
-      margin: 0 20px 0 20px;
+      margin: 0 20px 20px 20px;
     }
     h1 {
         font-size: 2rem;
-        padding: 20px 0 20px 0; 
+        padding: 10px 0 10px 0; 
+    }
+
+    .no-game {
+      width: 400px;
+      height: 400px;
+      margin: 0 20px 20px 20px;
     }
 
     #score-screen {
@@ -60,11 +81,16 @@ h1 {
     #game {
       width: 200px;
       height: 200px;
-      margin: 0 20px 0 20px;
+      margin: 0 20px 20px 20px;
     }
     h1 {
         font-size: 1.5rem;
-        padding: 20px 0 20px 0; 
+        padding: 10px 0 10px 0; 
+    }
+    .no-game {
+        width: 200px;
+      height: 200px;
+      margin: 0 20px 20px 20px;
     }
     #score-screen {
         font-size: 1.5rem;
@@ -78,10 +104,6 @@ h1 {
 .row {
     width: 100%;
     height: 33%;
-    background-image: url(./img/dirt3.png);
-    background-size: 33%;
-    background-repeat: repeat;
-    background-position: center;
     display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
@@ -92,66 +114,69 @@ h1 {
 
 
 
-div > img {
-    height: 100%;
-    width: 100%;
+
+
+@keyframes floatBubble {
+  0% {
+      top:35%;
+  }
+  50% {
+      top: 0px;
+  }
+  100% {
+    top: 35%;
+}
 }
 
-
-
-@keyframes slidein {
-    0% {
-      margin-bottom: 0%;
-    }
-    50% {
-      margin-bottom: 15%;
-    }
-    100% {
-      margin-bottom: 0%;
-    }
+@keyframes floatBubbleBack {
+  0% {
+      top:0px;
   }
-
-  @keyframes slideout {
-    0% {
-      margin-bottom: 0%;
-    }
-    50% {
-      margin-bottom: -8%;
-    }
-    100% {
-      margin-bottom: -15%;
-    }
+  100% {
+      top: 10%;
   }
+}
 
-  .hole-down {
+.putin {
+    height: 50%;
+    width: 50%;
+    margin-top: 10%;
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+    z-index: 0;
+}
+
+.dirt {
+  height: 60%;
+  width: 80%;
+  position:relative;
+  margin-top: 35%;
+  margin-left: auto;
+  margin-right: auto;
+  display:block;
+  z-index: 1;
+}
+
+.putin.visible {
+  -webkit-animation: floatBubble 2s 1  normal ease;
+  animation: floatBubble 2s 1  normal ease;
+}
+
+.hole-down {
     height: 100%;
     width: 33%;
+    position: relative;
 }
+
 
 .hole-up {
-    background-image: url(./img/Putin.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 45%;
-    z-index: -3;
     height: 100%;
     width: 33%;
-    animation-duration: 2s;
-    animation-name: slidein;
-    animation-iteration-count: 1;
-}
-
-.putin-dead {
-    background-image: url(./img/Putin-dead.png);
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: 45%;
-    z-index: -3;
-    height: 100%;
-    width: 33%; 
-    animation-duration: 1s;
-    animation-name: slideout;
-    animation-iteration-count: 1;
+    position: relative;
 }
 
 
@@ -190,4 +215,31 @@ div > img {
 	justify-content: space-evenly;
 	align-items: center;
 	align-content: stretch;
+}
+
+#my-button {
+	box-shadow:inset 0px 1px 0px 0px #cf866c;
+	background:linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
+	background-color:#d0451b;
+	border-radius:3px;
+	border:1px solid #942911;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:13px;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #854629;
+}
+#my-button:hover {
+	background:linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
+	background-color:#bc3315;
+}
+#my-button:active {
+	position:relative;
+	top:1px;
+}
+
+.hidden-image {
+    display: none;
 }
