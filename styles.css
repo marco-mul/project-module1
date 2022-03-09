@@ -5,7 +5,7 @@
     font-family: 'Russo One', sans-serif;
     font-size: 16px;
     margin: 0 0;
-    cursor: url(./img/flag.cur), default;
+    cursor: url(http://www.rw-designer.com/cursor-extern.php?id=43023), default;
 }
 
 body {
@@ -15,7 +15,7 @@ body {
 	justify-content: flex-start;
 	align-items: center;
 	align-content: center;
-    cursor: url(./img/flag.cur), default;
+  cursor: url(http://www.rw-designer.com/cursor-extern.php?id=43023), default;
     background-image: url(./img/dirt-bg.jpeg);
     background-repeat: repeat;
     background-position: cover;
@@ -118,13 +118,13 @@ h1 {
 
 @keyframes floatBubble {
   0% {
-      top:35%;
+      top:25%;
   }
   50% {
-      top: 0px;
+      top: -10%;
   }
   100% {
-    top: 35%;
+    top: 25%;
 }
 }
 
@@ -138,11 +138,11 @@ h1 {
 }
 
 .putin {
-    height: 50%;
-    width: 50%;
-    margin-top: 10%;
+    height: 40%;
+    width: 40%;
+    margin-top: 12%;
     position: absolute;
-    left: 25%;
+    left: 28%;
     top: 25%;
     margin-left: auto;
     margin-right: auto;
@@ -151,7 +151,7 @@ h1 {
 }
 
 .dirt {
-  height: 60%;
+  height: 55%;
   width: 80%;
   position:relative;
   margin-top: 35%;
@@ -217,6 +217,10 @@ h1 {
 	align-content: stretch;
 }
 
+.rules {
+  padding: 10px 0 20px 0;
+}
+
 #my-button {
 	box-shadow:inset 0px 1px 0px 0px #cf866c;
 	background:linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
@@ -242,4 +246,8 @@ h1 {
 
 .hidden-image {
     display: none;
+}
+
+#hidden-sound {
+  display: none;
 }
