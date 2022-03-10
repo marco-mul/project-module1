@@ -102,6 +102,8 @@ function endGame(){
 
 function restartGame() {
     clearInterval(timeInterval);
+    clearInterval(randomPutinInt);
+    clearInterval(oldRandomPutinInt);
     startGame();
 }
 
