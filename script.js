@@ -74,7 +74,7 @@ function startGame() {
         if (time === 0) {
           clearInterval(timeInterval);
           clearInterval(randomPutinInt);
-          clearInterval(oldRandomPutinInt)
+          clearInterval(oldRandomPutinInt);
           gameBoard.classList.add('hidden');
           endGame();
       }}, 1000);
@@ -101,43 +101,17 @@ function endGame(){
 
 
 function restartGame() {
-    clearInterval(timeInterval)
-    startGame()
+    clearInterval(timeInterval);
+    startGame();
 }
 
-buttonStart.addEventListener('click', restartGame)
-
-
-// select random divs to show
-
-// let randomPutin
-// let oldRandomPutin
-
-// let randomPutinInt
-// let oldRandomPutinInt
-
-
-// randomPutinInt = setInterval(function() {
-//     const index = Math.floor(Math.random() * (0 - divToWhack.length + 1)) + divToWhack.length;
-//     randomPutin = divToWhack[index]
-//     randomPutin.classList.add('visible')
-//     oldRandomPutin = randomPutin
-//   }, 2005);
-
-
-// oldRandomPutinInt = setInterval(function() {
-//     oldRandomPutin.classList.remove('visible')
-//   }, 1995);
+buttonStart.addEventListener('click', restartGame);
 
 
 // Time display
 
-let timeScreen = document.getElementById('time-screen')
+let timeScreen = document.getElementById('time-screen');
 console.log(timeScreen)
-
-
-
-
 
 
 // Score 
@@ -156,7 +130,7 @@ console.log(score)
 
 scoreScreen.innerText = score
 
-// Playing the game
+// When shooting
 
 
 divToWhack.forEach(item => {
