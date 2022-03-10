@@ -138,7 +138,7 @@ divToWhack.forEach(item => {
         console.log(item)
         item.src="./img/Putin-dead.png" ;
         document.getElementById('hidden-sound').play();
-        navigator.vibrate(100);
+        navigator.vibrate(50);
         addPoints(10);
         scoreScreen.innerText = score;
         setTimeout(function() {
