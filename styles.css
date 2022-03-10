@@ -186,6 +186,7 @@ h1 {
   margin-right: auto;
   display: block;
   z-index: 0;
+  cursor: pointer;
 }
 
 .dirt {

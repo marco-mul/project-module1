@@ -150,17 +150,3 @@ divToWhack.forEach(item => {
     });
 
 // On iOS
-
-    divToWhack.forEach(item => {
-        item.addEventListener('touchstart', event => {
-            console.log(item)
-            item.src="./img/Putin-dead.png" ;
-            document.getElementById('hidden-sound').play();
-            navigator.vibrate(50);
-            addPoints(10);
-            scoreScreen.innerText = score;
-            setTimeout(function() {
-            item.src="./img/Putin.png" ;
-            }, 1000);
-            })
-        });
