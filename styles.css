@@ -8,6 +8,10 @@
     cursor: url(http://www.rw-designer.com/cursor-extern.php?id=43023), default;
 }
 
+*:hover {
+    cursor: url(http://www.rw-designer.com/cursor-extern.php?id=43023), default;
+}
+
 body {
     display: flex;
 	flex-direction: column;
@@ -15,7 +19,6 @@ body {
 	justify-content: flex-start;
 	align-items: center;
 	align-content: center;
-  cursor: url(http://www.rw-designer.com/cursor-extern.php?id=43023), default;
     background-image: url(./img/dirt-bg.jpeg);
     background-repeat: repeat;
     background-position: cover;
@@ -41,7 +44,29 @@ h1 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    z-index: 1000 !important;
+    z-index: 3;
+    width: 600px;
+    height: 600px;
+    margin: 0 10px 20px 10px;
+}
+
+.win-game {
+    background-image: url(./img/well-done.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 3;
+    width: 600px;
+    height: 600px;
+    margin: 0 10px 20px 10px;
+}
+
+.loose-game {
+    background-image: url(./img/try-again.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 3;
     width: 600px;
     height: 600px;
     margin: 0 10px 20px 10px;
@@ -68,6 +93,18 @@ h1 {
       margin: 0 20px 20px 20px;
     }
 
+    .win-game {
+        width: 400px;
+        height: 400px;
+        margin: 0 20px 20px 20px;
+    }
+
+    .loose-game {
+        width: 400px;
+        height: 400px;
+        margin: 0 20px 20px 20px;
+    }
+
     #score-screen {
         font-size: 2rem;
     }
@@ -92,6 +129,19 @@ h1 {
       height: 200px;
       margin: 0 20px 20px 20px;
     }
+
+    .win-game {
+        width: 200px;
+      height: 200px;
+      margin: 0 20px 20px 20px;
+    }
+
+    .loose-game {
+        width: 200px;
+      height: 200px;
+      margin: 0 20px 20px 20px;
+    }
+
     #score-screen {
         font-size: 1.5rem;
     }
@@ -228,7 +278,6 @@ h1 {
 	border-radius:3px;
 	border:1px solid #942911;
 	display:inline-block;
-	cursor:pointer;
 	color:#ffffff;
 	font-size:13px;
 	padding:6px 24px;
