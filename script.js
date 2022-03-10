@@ -149,4 +149,3 @@ divToWhack.forEach(item => {
         })
     });
 
-// On iOS
