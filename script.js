@@ -8,7 +8,7 @@ function musicPlay() {
 }
 
 
-// Starting the game
+// Playing the game
 
 let score = 0
 

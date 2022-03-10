@@ -1,278 +1,259 @@
-@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
 
-html {
-    color: #ffffff;
-    font-family: 'Russo One', sans-serif;
-    font-size: 16px;
-    margin: 0 0;
-    cursor: url(./img/cursor.cur), default;
+* {
+  color: #ffffff;
+  font-family: "Russo One", sans-serif;
+  font-size: 16px;
+  margin: 0 0;
+  cursor: url(cursor.cur), default;
 }
 
-/* html:hover {
-    cursor: url(./img/target.png) 50 25, default;
-}
-
-*:hover {
-    cursor: url(./img/target.png) 50 25, default;
-}
-
-body:hover {
-    cursor: url(./img/target.png) 50 25, default;
-} */
 
 body {
-    display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: flex-start;
-	align-items: center;
-	align-content: center;
-    background-image: url(./img/dirt-bg.jpeg);
-    background-repeat: repeat;
-    background-position: cover;
-    background-size: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  background-image: url(./img/dirt-bg.jpeg);
+  background-repeat: repeat;
+  background-position: cover;
+  background-size: 100%;
 }
 
-
 h1 {
-    font-size: 4rem;
-    padding: 10px 0 20px 0;
+  font-size: 4rem;
+  padding: 10px 0 20px 0;
 }
 
 #game {
-    border: #ffffff 5px solid;
-    width: 600px;
-    height: 600px;
-    margin: 0 10px 20px 10px;
-    
+  border: #ffffff 5px solid;
+  width: 600px;
+  height: 600px;
+  margin: 0 10px 20px 10px;
 }
 
 .no-game {
-    background-image: url(./img/game-start.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    z-index: 3;
-    width: 600px;
-    height: 600px;
-    margin: 0 10px 20px 10px;
+  background-image: url(./img/game-start.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 3;
+  width: 600px;
+  height: 600px;
+  margin: 0 10px 20px 10px;
 }
 
 .win-game {
-    background-image: url(./img/well-done.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    z-index: 3;
-    width: 600px;
-    height: 600px;
-    margin: 0 10px 20px 10px;
+  background-image: url(./img/well-done.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 3;
+  width: 600px;
+  height: 600px;
+  margin: 0 10px 20px 10px;
 }
 
 .loose-game {
-    background-image: url(./img/try-again.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    z-index: 3;
-    width: 600px;
-    height: 600px;
-    margin: 0 10px 20px 10px;
+  background-image: url(./img/try-again.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 3;
+  width: 600px;
+  height: 600px;
+  margin: 0 10px 20px 10px;
 }
 
 .hidden {
-    display:none;
+  display: none;
 }
 
 @media (max-width: 600px) {
-    #game {
-      width: 400px;
-      height: 400px;
-      margin: 0 20px 20px 20px;
-    }
-    h1 {
-        font-size: 2rem;
-        padding: 10px 0 10px 0; 
-    }
-
-    .no-game {
-      width: 400px;
-      height: 400px;
-      margin: 0 20px 20px 20px;
-    }
-
-    .win-game {
-        width: 400px;
-        height: 400px;
-        margin: 0 20px 20px 20px;
-    }
-
-    .loose-game {
-        width: 400px;
-        height: 400px;
-        margin: 0 20px 20px 20px;
-    }
-
-    #score-screen {
-        font-size: 2rem;
-    }
-
-    #time-screen {
-        font-size: 2rem;
-    }
+  #game {
+    width: 400px;
+    height: 400px;
+    margin: 0 20px 20px 20px;
+  }
+  h1 {
+    font-size: 2rem;
+    padding: 10px 0 10px 0;
   }
 
-  @media (max-width: 300px) {
-    #game {
-      width: 200px;
-      height: 200px;
-      margin: 0 20px 20px 20px;
-    }
-    h1 {
-        font-size: 1.5rem;
-        padding: 10px 0 10px 0; 
-    }
-    .no-game {
-        width: 200px;
-      height: 200px;
-      margin: 0 20px 20px 20px;
-    }
-
-    .win-game {
-        width: 200px;
-      height: 200px;
-      margin: 0 20px 20px 20px;
-    }
-
-    .loose-game {
-        width: 200px;
-      height: 200px;
-      margin: 0 20px 20px 20px;
-    }
-
-    #score-screen {
-        font-size: 1.5rem;
-    }
-
-    #time-screen {
-        font-size: 1.5rem;
-    }
+  .no-game {
+    width: 400px;
+    height: 400px;
+    margin: 0 20px 20px 20px;
   }
 
-.row {
-    width: 100%;
-    height: 33%;
-    display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-evenly;
-	align-items: center;
-	align-content: center;
+  .win-game {
+    width: 400px;
+    height: 400px;
+    margin: 0 20px 20px 20px;
+  }
+
+  .loose-game {
+    width: 400px;
+    height: 400px;
+    margin: 0 20px 20px 20px;
+  }
+
+  #score-screen {
+    font-size: 2rem;
+  }
+
+  #time-screen {
+    font-size: 2rem;
+  }
 }
 
+@media (max-width: 300px) {
+  #game {
+    width: 200px;
+    height: 200px;
+    margin: 0 20px 20px 20px;
+  }
+  h1 {
+    font-size: 1.5rem;
+    padding: 10px 0 10px 0;
+  }
+  .no-game {
+    width: 200px;
+    height: 200px;
+    margin: 0 20px 20px 20px;
+  }
 
+  .win-game {
+    width: 200px;
+    height: 200px;
+    margin: 0 20px 20px 20px;
+  }
 
+  .loose-game {
+    width: 200px;
+    height: 200px;
+    margin: 0 20px 20px 20px;
+  }
 
+  #score-screen {
+    font-size: 1.5rem;
+  }
+
+  #time-screen {
+    font-size: 1.5rem;
+  }
+}
+
+.row {
+  width: 100%;
+  height: 33%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+}
 
 @keyframes floatBubble {
   0% {
-      top:25%;
+    top: 25%;
   }
   50% {
-      top: -10%;
+    top: -10%;
   }
   100% {
     top: 25%;
-}
+  }
 }
 
 @keyframes floatBubbleBack {
   0% {
-      top:0px;
+    top: 0px;
   }
   100% {
-      top: 10%;
+    top: 10%;
   }
 }
 
 .putin {
-    height: 40%;
-    width: 40%;
-    margin-top: 12%;
-    position: absolute;
-    left: 28%;
-    top: 25%;
-    margin-left: auto;
-    margin-right: auto;
-    display:block;
-    z-index: 0;
+  height: 40%;
+  width: 40%;
+  margin-top: 12%;
+  position: absolute;
+  left: 28%;
+  top: 25%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  z-index: 0;
 }
 
 .dirt {
   height: 55%;
   width: 80%;
-  position:relative;
+  position: relative;
   margin-top: 35%;
   margin-left: auto;
   margin-right: auto;
-  display:block;
+  display: block;
   z-index: 1;
 }
 
 .putin.visible {
-  -webkit-animation: floatBubble 2s 1  normal ease;
-  animation: floatBubble 2s 1  normal ease;
+  -webkit-animation: floatBubble 2s 1 normal ease;
+  animation: floatBubble 2s 1 normal ease;
 }
 
 .hole-down {
-    height: 100%;
-    width: 33%;
-    position: relative;
+  height: 100%;
+  width: 33%;
+  position: relative;
 }
-
 
 .hole-up {
-    height: 100%;
-    width: 33%;
-    position: relative;
+  height: 100%;
+  width: 33%;
+  position: relative;
 }
 
-
 #score-element {
-    display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: flex-start;
-	align-items: center;
-	align-content: center;
-    padding: 20px 40px 20px 40px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  padding: 20px 40px 20px 40px;
 }
 
 #score-screen {
-    font-size: 3rem;
+  font-size: 3rem;
 }
 
 #time-element {
-    display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: flex-start;
-	align-items: center;
-	align-content: center;
-    padding: 20px 40px 20px 40px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  padding: 20px 40px 20px 40px;
 }
 
 #time-screen {
-    font-size: 3rem;
+  font-size: 3rem;
 }
 
 #bottom {
-    display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-evenly;
-	align-items: center;
-	align-content: stretch;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: stretch;
 }
 
 .rules {
@@ -280,29 +261,29 @@ h1 {
 }
 
 #my-button {
-	box-shadow:inset 0px 1px 0px 0px #cf866c;
-	background:linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
-	background-color:#d0451b;
-	border-radius:3px;
-	border:1px solid #942911;
-	display:inline-block;
-	color:#ffffff;
-	font-size:13px;
-	padding:6px 24px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #854629;
+  box-shadow: inset 0px 1px 0px 0px #cf866c;
+  background: linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
+  background-color: #d0451b;
+  border-radius: 3px;
+  border: 1px solid #942911;
+  display: inline-block;
+  color: #ffffff;
+  font-size: 13px;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #854629;
 }
 #my-button:hover {
-	background:linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
-	background-color:#bc3315;
+  background: linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
+  background-color: #bc3315;
 }
 #my-button:active {
-	position:relative;
-	top:1px;
+  position: relative;
+  top: 1px;
 }
 
 .hidden-image {
-    display: none;
+  display: none;
 }
 
 #hidden-sound {
